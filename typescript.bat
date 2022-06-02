@@ -1,2 +1,2 @@
-cd \HTML-CSS-TS learn\scripts\Typescript
+cd Scripts\TypeScript
 tsc
