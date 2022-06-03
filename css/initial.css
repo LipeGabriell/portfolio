@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    text-align: center;
+}
+
+.recepcionar>p {
+    margin-top: 2vw;
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+}
