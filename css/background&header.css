@@ -6,69 +6,7 @@
 /*--  Background --*/
 
 body {
-    background: linear-gradient(270deg, #3edfb5, #428aee, #4255ee, #735afd);
-    background-size: 800% 800%;
-
-    -webkit-animation: backgroundGrad 20s ease infinite;
-    -moz-animation: backgroundGrad 20s ease infinite;
-    -o-animation: backgroundGrad 20s ease infinite;
-    animation: backgroundGrad 20s ease infinite;
-}
-
-@-webkit-keyframes backgroundGrad {
-    0% {
-        background-position: 64% 0%
-    }
-
-    50% {
-        background-position: 37% 100%
-    }
-
-    100% {
-        background-position: 64% 0%
-    }
-}
-
-@-moz-keyframes backgroundGrad {
-    0% {
-        background-position: 64% 0%
-    }
-
-    50% {
-        background-position: 37% 100%
-    }
-
-    100% {
-        background-position: 64% 0%
-    }
-}
-
-@-o-keyframes backgroundGrad {
-    0% {
-        background-position: 64% 0%
-    }
-
-    50% {
-        background-position: 37% 100%
-    }
-
-    100% {
-        background-position: 64% 0%
-    }
-}
-
-@keyframes backgroundGrad {
-    0% {
-        background-position: 64% 0%
-    }
-
-    50% {
-        background-position: 37% 100%
-    }
-
-    100% {
-        background-position: 64% 0%
-    }
+    background-color: rgba(0, 0, 0, 0.808);
 }
 
 /* -- Header --*/
@@ -77,10 +15,7 @@ body {
 header {
     display: flex;
     text-align: center;
-    background-color: rgba(49, 49, 49, 0.705);
-    border-top: black;
-    border-left: black;
-    border-right: black;
+    background-color: rgba(49, 49, 49, 0.574);
     height: fit-content;
     padding: .5rem;
     justify-content: space-between;
