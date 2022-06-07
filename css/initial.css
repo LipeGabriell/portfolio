@@ -3,8 +3,27 @@
     text-align: center;
 }
 
-.recepcionar>p {
+.recepcionar {
+
+    background-color: #5ee7ff7f;
+    border-radius: 90px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.recepcionar>h1 {
     margin-top: 2vw;
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: xx-large;
+    font-family: 'Dancing Script', cursive;
+}
+
+.recepcionar>h2 {
+    margin-top: 2vw;
+    color: white;
+    font-family: 'Cinzel', serif;
+}
+
+.black {
+    color: rgb(0, 0, 0);
 }
