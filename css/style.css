@@ -43,11 +43,14 @@ header a {
 
 }
 
+/*  Páginas  */
+
 .mainScroll {
     width: 100%;
     height: 100%;
     scroll-snap-type: y mandatory;
-    overflow-y: scroll;}
+    overflow-y: scroll;
+}
 
 .mainScroll>section {
     display: flex;
@@ -59,9 +62,9 @@ header a {
 }
 
 .mainScroll>:nth-child(1) {
-background-image: linear-gradient(aqua,60%,purple);
-color: aqua;
-font-size: 2rem;
+    background-image: linear-gradient(aqua,60%,purple);
+    color: aqua;
+    font-size: 2rem;
 }
 
 
@@ -71,10 +74,24 @@ font-size: 2rem;
 }
 
 .mainScroll>:nth-child(3) {
-background-image: linear-gradient(yellow,90%,black);
+    background-image: linear-gradient(yellow,90%,black);
 
 }
 
 .black {
     color: black;
+}
+
+.projetos {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+#projHover {
+    color: white;
+    text-decoration: none;
+}
+
+#projHover:hover {
+    color: rgb(0, 255, 106);
 }
