@@ -15,12 +15,11 @@ body {
 header {
     display: flex;
     text-align: center;
-    background-color: rgba(49, 49, 49, 0.574);
-    height: fit-content;
+    background-color: rgba(21, 21, 21, 0.146);
+    height: 1.5rem;
     padding: .5rem;
     justify-content: space-between;
-    box-shadow: 0 0 1.2rem rgb(0, 0, 0);
-
+    box-shadow: 0 0 2rem rgb(0, 0, 0);
 }
 
 #title {
