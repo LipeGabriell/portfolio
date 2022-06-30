@@ -1,2 +1,2 @@
-cd Scripts\TypeScript
+cd Scripts
 tsc

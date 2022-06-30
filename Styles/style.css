@@ -3,13 +3,14 @@
 * {
   padding: 0;
   margin: 0;
-  text-align: center;
+  background: none;
+  color: orange;
 }
 
 /*--  Background --*/
 body {
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.808);
+  background-color: tomato;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -17,7 +18,7 @@ body {
 
 /* Scroll (não pega firefox//edge) */
 ::-webkit-scrollbar {
-  background-color: #0A0B0D;
+  background-color: #0a0b0d;
 }
 
 /* -- Header --*/
@@ -34,17 +35,14 @@ header {
   box-shadow: 0 0 2rem rgb(0, 0, 0);
 }
 header ul {
+  margin-right: 5vw;
   display: flex;
   flex-wrap: nowrap;
 }
 header a {
   text-decoration: none;
-  color: #5ee7ff;
+  color: rgb(166, 0, 255);
   padding: 0.2vw 1vw;
-}
-header p {
-  color: #5ee7ff;
-  padding: 0.2vw 3vw;
 }
 
 /*  Páginas  */
@@ -56,35 +54,60 @@ header p {
   overflow-x: hidden;
 }
 .mainScroll section {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 100vw;
   height: 100vh;
   scroll-snap-align: start;
 }
 .mainScroll :nth-child(1) {
-  background-color: #0A0B0D;
+  background-color: #0a0b0d;
+  display: grid;
+  justify-items: center;
 }
 .mainScroll :nth-child(1) h1 {
-  margin-top: -75vh;
-  color: cyan;
+  color: whitesmoke;
 }
 .mainScroll :nth-child(1) p {
-  color: red;
+  color: yellow;
+}
+.mainScroll :nth-child(1) svg {
+  min-width: auto;
+  min-height: 15vh;
+  background-color: #0a0b0d;
+  fill: whitesmoke;
+}
+.mainScroll :nth-child(1) a {
+  text-decoration: none;
+  color: none;
+}
+.mainScroll :nth-child(1) #images {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 90px;
+}
+.mainScroll :nth-child(1) #images svg {
+  padding: 15px;
 }
 .mainScroll :nth-child(2) {
   background-color: #0d0f12;
 }
+.mainScroll :nth-child(2) #Sobre {
+  color: whitesmoke;
+}
+.mainScroll :nth-child(2) p {
+  color: yellow;
+  font-size: 2rem;
+  max-width: 40%;
+  margin: 0 30%;
+}
 .mainScroll :nth-child(3) {
-  background-color: #0A0B0D;
+  background-color: #0a0b0d;
 }
 .mainScroll :nth-child(4) {
   background-color: #0d0f12;
-}
-
-h1, p {
-  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

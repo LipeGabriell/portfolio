@@ -1,23 +1,20 @@
 /* Cores padrão */
-
-
-$cor-um: #0A0B0D ;
+$cor-um: #0a0b0d;
 $cor-dois: #0d0f12;
-
-
-
+$cor-header: rgb(166, 0, 255);
 
 * {
     padding: 0;
     margin: 0;
-    text-align: center;
+    background: none;
+    color:orange;
 }
 
 /*--  Background --*/
 
 body {
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.808);
+    background-color: tomato;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -26,11 +23,10 @@ body {
 /* Scroll (não pega firefox//edge) */
 
 ::-webkit-scrollbar {
-    background-color: #0A0B0D;
+    background-color: #0a0b0d;
 }
 
 /* -- Header --*/
-
 
 header {
     border-bottom: solid rgb(51, 51, 51) 1px;
@@ -40,30 +36,24 @@ header {
     text-align: center;
     background-color: black;
     height: 1.5rem;
-    padding: .5rem;
+    padding: 0.5rem;
     justify-content: space-between;
     box-shadow: 0 0 2rem rgb(0, 0, 0);
 
     ul {
-            display: flex;
-            flex-wrap: nowrap;
+        margin-right: 5vw;
+        display: flex;
+        flex-wrap: nowrap;
     }
 
     a {
-            text-decoration: none;
-            color: #5ee7ff;
-            padding: .2vw 1vw;
-    
+        
+        text-decoration: none;
+        color: $cor-header;
+        padding: 0.2vw 1vw;
     }
 
-    p {
-            color: #5ee7ff;
-            padding: .2vw 3vw;
-    }
 }
-
-
-
 
 /*  Páginas  */
 
@@ -75,45 +65,71 @@ header {
     overflow-x: hidden;
 
     section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            height: 100vh;
-            scroll-snap-align: start;
-        }
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        scroll-snap-align: start;
+    }
 
     :nth-child(1) {
-          background-color: $cor-um;
-        
-            h1 {
-                margin-top: -75vh;
-             color: cyan;
-             }
-    
-             p {
-                color: red;
-             }
+        background-color: $cor-um;
+        display: grid;
+        justify-items: center;
+        h1 {
+            color: whitesmoke;
         }
 
+        p {
+            color: yellow;
+        }
+        
+        svg {
+            min-width: auto;
+            min-height: 15vh;
+            background-color: $cor-um;
+            fill: whitesmoke;
+        }
+
+        a {
+            text-decoration: none;
+            color: none;
+        }
+
+        #images {
+            display: flex;
+            justify-content: space-between;
+            border-radius: 90px;
+
+            svg {
+
+                padding: 15px;
+            }
+        }
+    }
+
     :nth-child(2) {
-         background-color: $cor-dois;
-     }
+        background-color: $cor-dois;
 
-     :nth-child(3) {
-         background-color: $cor-um;
-      }
+        #Sobre {
+            color: whitesmoke;
+        }
 
-     :nth-child(4) {
-         background-color: $cor-dois;
-      }
+        p {
+            color: yellow;
+            font-size: 2rem;
+            max-width: 40%;
+            margin: 0 30%;
+        }
+    }
 
+    :nth-child(3) {
+        background-color: $cor-um;
+    }
+
+    :nth-child(4) {
+        background-color: $cor-dois;
+    }
 }
-
-h1,p {
-
-    color: white;
-    
-}
-
-    
