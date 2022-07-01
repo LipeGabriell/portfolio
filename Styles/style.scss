@@ -52,14 +52,14 @@ header {
         margin-right: 5vw;
         display: flex;
         flex-wrap: nowrap;
-        @include textoColorido()
+        color: cyan;
     }
 
     a {
 
         text-decoration: none;
         padding: 0.2vw 1vw;
-        @include textoColorido()
+        color: cyan
     }
 
 }
