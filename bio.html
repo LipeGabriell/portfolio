@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <title></title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <p>teste</p>
-  </body>
+
+<head>
+  <title>clientX/clientY example</title>
+
+  <script>
+    function showCoords(evt) {
+      alert(
+        "clientX value: " + evt.clientX + "\n" +
+        "clientY value: " + evt.clientY + "\n"
+      );
+    }
+  </script>
+</head>
+
+<body onmousedown="showCoords(event)">
+  <p>Para mostrar as coordenadas do mouse em qualquer lugar da página.</p>
+</body>
+
 </html>

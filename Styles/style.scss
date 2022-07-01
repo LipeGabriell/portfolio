@@ -1,13 +1,20 @@
 /* Cores padrão */
 $cor-um: #0a0b0d;
 $cor-dois: #0d0f12;
-$cor-header: rgb(166, 0, 255);
+$cor-botao: #1f2226;
+
+@mixin textoColorido {
+    background: linear-gradient(cyan, purple);
+    background-clip: text;
+    color: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 * {
     padding: 0;
     margin: 0;
     background: none;
-    color:orange;
+    color: orange;
 }
 
 /*--  Background --*/
@@ -20,10 +27,11 @@ body {
     margin: 0;
 }
 
-/* Scroll (não pega firefox//edge) */
+/* Scroll (não pega firefox) */
 
 ::-webkit-scrollbar {
-    background-color: #0a0b0d;
+    background-color: black;
+    border-left: solid rgb(51, 51, 51) 1px;
 }
 
 /* -- Header --*/
@@ -44,13 +52,14 @@ header {
         margin-right: 5vw;
         display: flex;
         flex-wrap: nowrap;
+        @include textoColorido()
     }
 
     a {
-        
+
         text-decoration: none;
-        color: $cor-header;
         padding: 0.2vw 1vw;
+        @include textoColorido()
     }
 
 }
@@ -78,35 +87,30 @@ header {
         background-color: $cor-um;
         display: grid;
         justify-items: center;
+
         h1 {
-            color: whitesmoke;
+
+            @include textoColorido()
         }
 
-        p {
-            color: yellow;
-        }
-        
-        svg {
-            min-width: auto;
-            min-height: 15vh;
-            background-color: $cor-um;
-            fill: whitesmoke;
-        }
+        button {
+            background-color: $cor-botao;
+            min-width: 6vw;
+            min-height: 4vh;
+            font: 2rem Arial bold;
+            padding: 10%;
+            margin-bottom: 20vh;
+            border: solid 2px;
+            border-color: cyan;
+            animation: bordaColoridaRodar .5s infinite forwards;
 
-        a {
-            text-decoration: none;
-            color: none;
-        }
-
-        #images {
-            display: flex;
-            justify-content: space-between;
-            border-radius: 90px;
-
-            svg {
-
-                padding: 15px;
+            h2 {
+                @include textoColorido()
             }
+        }
+
+        button:hover {
+            text-shadow: 1px -1px 10px rgba(255, 255, 255, 0.138);
         }
     }
 
@@ -114,14 +118,11 @@ header {
         background-color: $cor-dois;
 
         #Sobre {
-            color: whitesmoke;
+            @include textoColorido()
         }
 
         p {
-            color: yellow;
-            font-size: 2rem;
-            max-width: 40%;
-            margin: 0 30%;
+            @include textoColorido()
         }
     }
 
@@ -131,5 +132,36 @@ header {
 
     :nth-child(4) {
         background-color: $cor-dois;
+    }
+}
+
+@keyframes bordaColoridaRodar {
+
+    0% {
+        border-image-source: linear-gradient(to right bottom, cyan, purple);
+        border-image-slice: 1;
+    }
+
+    25% {
+        border-image-source: linear-gradient(to left bottom, cyan, purple);
+        border-image-slice: 1;
+
+    }
+
+    50% {
+        border-image-source: linear-gradient(to left top, cyan, purple);
+        border-image-slice: 1;
+
+    }
+
+    75% {
+        border-image-source: linear-gradient(to right top, cyan, purple);
+        border-image-slice: 1;
+
+    }
+
+    100% {
+        border-image-source: linear-gradient(to right bottom, cyan, purple);
+        border-image-slice: 1;
     }
 }
